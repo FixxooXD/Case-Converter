@@ -21,6 +21,10 @@
       font-family: "Exo 2", sans-serif;
     }
 
+    .mar{
+  margin-top: 10vh;
+}
+
     button {
       background-color: #ffab00;
       color: white;
@@ -108,44 +112,43 @@
           <button id="alternateBtn" class="px-3 py-1 ml-1 sm:px-3 sm:py-1 sm:mr-5">
             aLtErNate case
           </button>
-          <button id="titleBtn" class="px-3 py-1 mt-1 ml-4 sm:px-3 sm:py-1 sm:mr-5">
+          <button id="titleBtn" class="px-3 py-1 mt-1 ml-2 sm:px-3 sm:py-1 sm:mr-5">
             Title case
           </button>
-          <button id="inverseBtn" class="ml-2 px-3 py-1 sm:px-3 sm:py-1 sm:mr-5">
+          <button id="inverseBtn" class="ml-1 px-3 py-1 sm:px-3 sm:py-1 sm:mr-5">
             Inverse case
           </button>
         </div>
-        <div class="mt-1 sm:flex sm:flex-row justify-center sm:mt-2 sm:mt-5">
+        <div class="mt-5 ml-4 sm:flex sm:flex-row justify-center sm:mt-2 sm:mt-5">
           <button value="download" id="downloadBtn" class="px-3 py-1 ml-2 sm:px-3 sm:py-1 sm:mr-5">
             <span><i class="fa-solid fa-download"></i> </span>Download Text
           </button>
-            <button id="clear" class="px-3 py-1 sm:px-8 sm:py-1 sm:mr-5">
-              <i class="fa-solid fa-eraser"></i> Clear
-            </button>
-          </div>
+          <button id="clear" class="px-3 py-1 sm:px-8 sm:py-1 sm:mr-5">
+            <i class="fa-solid fa-eraser"></i> Clear
+          </button>
         </div>
       </div>
     </div>
-    <!-- links -->
-    <footer class="flex w-full mt-auto mt-2 justify-center sm:justify-end absolute sm:bottom-0 pb-1 py-3">
-      <span class="hidden sm:block absolute left-0 font-light">Developed By
-        <a class="font-light text-amber-500" href="https://github.com/FixxooXD" target="_blank">FixxooXD</a></span>
-      <div class="flex flex-row w-80 justify-center justify-around">
-        <div>
-          <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
-        </div>
-        <div>
-          <a href=""><i class="fa-brands fa-twitter text-2xl"></i></a>
-        </div>
-        <div>
-          <a href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
-        </div>
-        <div>
-          <a href=""><i class="fa-brands fa-linkedin text-2xl"></i></a>
-        </div>
-      </div>
-    </footer>
   </div>
+  <!-- links -->
+  <footer class="flex w-full mt-auto mt-2  mar  justify-center sm:justify-end sm:bottom-0 pb-1 py-3 footer-res">
+    <span class="hidden sm:block absolute left-0 font-light">Developed By
+      <a class="font-light text-amber-500" href="https://github.com/FixxooXD" target="_blank">FixxooXD</a></span>
+    <div class="flex flex-row w-80 justify-center justify-around">
+      <div>
+        <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
+      </div>
+      <div>
+        <a href=""><i class="fa-brands fa-twitter text-2xl"></i></a>
+      </div>
+      <div>
+        <a href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
+      </div>
+      <div>
+        <a href=""><i class="fa-brands fa-linkedin text-2xl"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script src="./app.js"></script>
   <!-- npx tailwindcss -i src/tailwind.css -o ./styles.css --watch -->
