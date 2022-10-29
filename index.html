@@ -13,22 +13,101 @@
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap" rel="stylesheet" />
   <title>Case-converter</title>
   <style>
+    body {
+      /* background-image: url("abstract-orange-yellow-geometric-background-260nw-2105607560.webp"); */
+      /* filter: blur(10px); */
+      background-color: antiquewhite;
+      width: 1vp;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* opacity: 60%; */
+    }
+    /* "Exo 2", sans-serif; */
     #Intro,
     span,
     textarea,
     .text,
     button {
-      font-family: "Exo 2", sans-serif;
+      font-family: inherit;
+      color: darkslategray;
     }
-
+    .navbar {
+      background-color: salmon;
+    }
+    #Intro {
+      padding: 10px;
+    }
+    
     button {
-      background-color: #ffab00;
+      background-color: white;
+      color: black;
+      border: solid 2px darkslategrey;
+      /* background-image: linear-gradient(180deg, orange, darkmagenta); */
+      /* background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(255,0,0,1)); */
+
+    }
+    #sentenceBtn {
+      border: solid 2px darkmagenta;
+      color: darkmagenta;
+    }
+    /* rgb(160, 238, 44); */
+      /* color: rgb(160, 238, 44); */
+    #LowerBtn {
+      border: solid 2px #ffab00;
+      color: #ffab00;
+    }
+    #upperBtn {
+      border: solid 2px rgb(83, 145, 187);
+      color: rgb(83, 145, 187);
+    }
+    #alternateBtn {
+      border: solid 2px darkmagenta;
+      color: darkmagenta;
+    }
+    #titleBtn {
+      border: solid 2px #ffab00;
+      color: #ffab00;
+    }
+    #inverseBtn {
+      border: solid 2px rgb(83, 145, 187);
+      color: rgb(83, 145, 187);
+    }
+    #sentenceBtn:hover, #alternateBtn:hover {
+      background-image: linear-gradient(180deg, rgb(219, 26, 145), darkmagenta);
+      border: solid 2px white;
       color: white;
     }
-
+    #LowerBtn:hover, #titleBtn:hover {
+      background-image: linear-gradient(180deg, #ffab00, rgb(219, 26, 145));
+      border: solid 2px white;
+      color: white;
+    }
+    #upperBtn:hover, #inverseBtn:hover {
+      background-image: linear-gradient(180deg, rgb(160, 238, 44), rgb(83, 145, 187));
+      border: solid 2px white;
+      color: white;
+    }
+    #clear {
+      border: solid 2px blue;
+      color: blue;
+    }
+    #clear:hover {
+      background-color: grey;
+    }
+    #downloadBtn {
+      background-color: green;
+    }
+    #downloadBtn:hover {
+      background-color: rgb(90, 192, 90);
+    }
+    .hidden sm:block absolute left-0 font-light {
+      padding-left: 10px;
+    }
     footer {
       /* background-color: #D3DECB; */
-      background-color: grey;
+      /* padding-left: 10px; */
+      background-color: whitesmoke;
     }
 
     /* @media only screen and (max-width: 320px) {
@@ -40,18 +119,38 @@
       /* color: #f59e0b; */
     }
 
+    /* #ffab00 */
+    /* #ffab00 */
     .textarea-box {
-      border-color: #f8a922;
+      border-color: darkslategrey;
     }
-
+    .hidden .absolute .left-0 .font-light {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .font-light .text-amber-500 {
+      color: darkblue;
+      font-weight: 500;
+    }
     textarea:focus,
     input:focus {
       outline: 0;
     }
-
+    span.developed {
+      font-size: large;
+      float: left;
+      font-weight: 500;
+    }
+    #spacebetweendeveloped {
+      padding-left: 10px;
+    }
     *:focus {
       outline: 0;
     }
+    /* div.border-b-2.w-screen.p-2.bg-amber-500.shadow-mg {
+      background-color: grey;
+      color: black;
+    } */
   </style>
 </head>
 
@@ -59,18 +158,21 @@
   <div class="w-full h-screen flex-col justify-center relative">
     <!-- content-box -->
     <div class="flex flex-col">
-      <div class="border-b-2 w-screen p-2 bg-amber-500 shadow-mg">
-        <h1 class="text-4xl" id="Intro">
-          <a href="./index.html">Case Converter</a>
+      <!-- "border-b-2 w-screen p-2 bg-amber-500 shadow-mg" -->
+      <div class="navbar">
+        <h1 class="text-4xl" id="Intro" color="whitesmoke">
+          <b class="heading"><a href="./index.html">Case Converter</a></b>
         </h1>
       </div>
+      <br>
       <div class="flex flex-col ml-auto mr-auto px-2">
         <div class="justify-center text-xl sm:text-xl mt-4" id="Intro">
-          Accidentally left the caps lock on and typed something, but can't be
-          bothered to start again and retype it all?
+          <!-- Accidentally left the caps lock on and typed something, but can't be
+          bothered to start again and retype it all? -->
+          Accidentally left the caps lock <b>ON</b> and typed something, no need to start again and retype it all?
         </div>
         <div class="sm:text-xl mb-4 relative" id="Intro">
-          dont Bother just Simply enter your text and choose the case you want
+          Don't worry!! Simply <b>ENTER</b> your text and choose the case you want
           to convert it to.
           <div id="text" class="text ml-auto mr-4 absolute right-0 hidden mt-3 text-sm">
             copied
@@ -128,8 +230,10 @@
     </div>
     <!-- links -->
     <footer class="flex w-full mt-auto mt-2 justify-center sm:justify-end absolute sm:bottom-0 pb-1 py-3">
-      <span class="hidden sm:block absolute left-0 font-light">Developed By
-        <a class="font-light text-amber-500" href="https://github.com/FixxooXD" target="_blank">FixxooXD</a></span>
+      <!-- hidden sm:block absolute left-0 font-light -->
+      <span class="developed hidden sm:block absolute left-0 font-light"><span id="spacebetweendeveloped">Developed By </span>
+        <a class="font-light text-amber-500" href="https://github.com/FixxooXD" target="_blank">FixxooXD</a>
+      </span>
       <div class="flex flex-row w-80 justify-center justify-around">
         <div>
           <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
